@@ -1,0 +1,57 @@
+.nav-style{
+	padding: 20px 30px;
+	background-color: #44432d;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 5px;
+}
+
+/* header css */
+.header{
+	display: flex;
+	height: 70px;
+}
+.head-brand{
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.head-brand:hover{
+	text-decoration: none;
+}
+.navigation ul li a{
+	font-size: 14px;
+}
+.navigation ul{
+	display: flex;
+	list-style: none;
+	margin: 0px;
+}
+.navigation ul li {
+	margin: 0px 20px;
+	cursor: pointer;
+}
+
+.home-box {
+	height: calc(100vh - 145px);
+	display: table;
+	width: 100%;
+	text-align: center;
+}
+.box-wrapper {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* footer css */
+.footer{
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 75px
+}
+.footer p {
+	margin: 0px;
+}
+/* You can add global styles to this file, and also import other style files */
