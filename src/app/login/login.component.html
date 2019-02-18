@@ -1,0 +1,23 @@
+<div class="login-box box">
+	<div class="box-wrapper">
+		<form [formGroup]="loginForm" (ngSubmit)="login()">
+			<h2>User Login</h2>
+			<div class="form-group">
+				<input type="text" name="usename" class="form-control" placeholder="Email" formControlName="email" required [ngClass]="{'invalid':submitted && f.email.errors, 'valid': submitted && !f.email.errors}">
+				<div *ngIf="submitted && f.email.errors">
+					<p *ngIf="f.email.errors.required" class="error">Email is required.</p>
+					<p *ngIf="f.email.errors.email" class="error">Invalid Email Address</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="password" name="pass" class="form-control" placeholder="Password" formControlName="pass" required [ngClass]="{'invalid': submitted && f.pass.errors, 'valid': submitted && !f.pass.errors}">
+				<div *ngIf="submitted && f.pass.errors">
+					<p *ngIf="f.pass.errors.required" class="error">Password is required.</p>
+				</div>
+			</div>
+			<div class="form-group center">
+				<button type="submit" class="ng-btn">Login</button>
+			</div>
+		</form>
+	</div>
+</div>

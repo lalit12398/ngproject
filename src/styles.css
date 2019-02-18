@@ -5,7 +5,41 @@
 	font-weight: 600;
 	letter-spacing: 5px;
 }
-
+.ng-btn {
+	background-color: #44432d;
+	border: 1px solid #44432d;
+	width: auto;
+	padding: 5px 20px;
+	color: #fff;
+	letter-spacing: 5px;
+	border-radius: 4px;
+	text-transform: uppercase;
+}
+.ng-btn:hover {
+	background-color: #000;
+}
+.invalid {
+	border-left: 8px solid #ff6e4d!important;
+}
+.valid {
+	border-left: 8px solid green!important;
+}
+.error {
+	color: #ff6e4d;
+}
+.center {
+	text-align: center;
+}
+a{
+	color: #fff!important;
+}
+a:hover{
+	color: #fff!important;
+	text-decoration: none!important;
+}
+h2{
+	margin-bottom: 20px!important;
+}
 /* header css */
 .header{
 	display: flex;
@@ -32,15 +66,27 @@
 	cursor: pointer;
 }
 
-.home-box {
+/* login box */
+.box {
 	height: calc(100vh - 145px);
 	display: table;
-	width: 100%;
-	text-align: center;
+	margin: auto;
+}
+.login-box {
+	width: 400px;
 }
 .box-wrapper {
 	display: table-cell;
 	vertical-align: middle;
+}
+.box-wrapper form{
+	padding: 20px;
+	border: 1px solid #c1c1c1;
+	border-radius: 4px;
+}
+.box-wrapper h2 {
+	text-align: center;
+	letter-spacing: 5px;
 }
 
 /* footer css */
