@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UsersService } from '../users.service';
+import { from } from 'rxjs';
 
 @Component({
 	selector: 'app-login',
@@ -10,11 +12,11 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 	loginForm : FormGroup;
 	submitted = false;
-	user = [
-	{email: "lalit@yopmail.com", pass: "Qwerty@123"},
-	{email: "swapy@yopmail.com", pass: "Qwerty@123"},
-	];
-	constructor(public builder : FormBuilder, public router : Router) {
+	constructor(
+		public builder : FormBuilder,
+		public router : Router,
+		public users: UsersService
+		) {
 
 	}
 
@@ -35,15 +37,6 @@ export class LoginComponent implements OnInit {
 		const password = this.loginForm.controls.pass.value;
 
 		let isLogged = false;
-		let loggedUser = this.user.find( data => {
-			if (data.email === email && data.pass === password ) {
-				isLogged = true;
-				this.router.navigate(['/home']);
-			}
-			this.router.navigate(['/login']);
-			return true;
-		})
-		console.log(this.user);
 		console.log(`${email}
 			${password}
 			${isLogged}`);

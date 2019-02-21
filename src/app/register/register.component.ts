@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsersService } from '../users.service';
+import { from } from 'rxjs';
 
 @Component({
 	selector: 'app-register',
@@ -11,7 +13,11 @@ export class RegisterComponent implements OnInit {
 	regForm : FormGroup;
 	submitted = false;
 
-	constructor(public builder : FormBuilder, public users: UsersService) { }
+	constructor(
+		public builder : FormBuilder,
+		public users: UsersService,
+		public router: Router
+		) {}
 
 	ngOnInit() {
 
@@ -31,8 +37,9 @@ export class RegisterComponent implements OnInit {
 
 	register() {
 		this.submitted = true;
-
-		console.log(this.regForm.controls);
+		this.users.setUser(this.regForm.value);
+		this.router.navigate(["/login"]);
+		console.log(this.regForm.value);
 	}
 
 }

@@ -4,10 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UsersService {
-  fname:any;
-  lname:any;
-  email:any;
-  phone:any;
-  password:any;
+
+  users:any = [];
   constructor() { }
+
+  setUser(userData:any) {
+    this.users.push(userData);
+  }
+
+  getUser() {
+    return this.users;
+  }
 }
