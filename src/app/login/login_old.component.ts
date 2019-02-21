@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
 	{email: "lalit@yopmail.com", pass: "Qwerty@123"},
 	{email: "swapy@yopmail.com", pass: "Qwerty@123"},
 	];
+
 	constructor(public builder : FormBuilder, public router : Router) {
 
 	}
