@@ -1,0 +1,20 @@
+<div *ngFor="let user of userData">
+  <div class="user-card">
+    <div class="row">
+      <div class="col-md-6 card-content">
+        <i class="fa fa-id-card" aria-hidden="true"></i><p>{{user.fname+" "+user.lname}}</p>
+      </div>
+      <div class="col-md-6 card-content">
+        <i class="fa fa-venus-mars" aria-hidden="true"></i><p>{{user.gender}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 card-content">
+        <i class="fa fa-envelope" aria-hidden="true"></i><p>{{user.email}}</p>
+      </div>
+      <div class="col-md-6 card-content">
+        <i class="fa fa-phone" aria-hidden="true"></i><p>{{user.phone}}</p>
+      </div>
+    </div>
+  </div>
+</div>

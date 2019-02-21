@@ -52,7 +52,7 @@ h2{
 }
 /* header css */
 .header{
-	display: flex;
+	display: block;
 	height: 70px;
 }
 .head-brand{
@@ -105,6 +105,55 @@ h2{
 	width: 700px;
 }
 
+/* sidebar style */
+.side-bar-main {
+    width: 15%;
+    margin-right: 2.5%;
+    min-height: 899px;
+    float: left;
+    background-color: #44432d;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+.side-bar-main ul {
+	list-style: none;
+	padding: 20px;
+}
+.side-bar-main ul li {
+	margin: 60px 10px;
+	cursor: pointer;
+}
+.side-bar-main ul li:first-child{
+	margin-top: 20px;
+}
+
+/* home style */
+.home-content {
+    width: 80%;
+    margin-top: 40px;
+    float: left;
+}
+.user-card {
+    padding: 20px;
+    background-color: #fff;
+    border: 4px solid #cfcfcf;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.user-card i{
+	float: left;
+    margin-right: 15px;
+    line-height: 20px;
+	font-size: 25px;
+	width: 30px;
+}
+.card-content {
+    margin: 10px 0px;
+}
 /* footer css */
 .footer{
 	text-align: center;
