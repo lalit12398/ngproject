@@ -89,6 +89,11 @@ h2{
 	letter-spacing: 5px;
 }
 
+/* Registration box */
+.reg-box {
+	width: 700px;
+}
+
 /* footer css */
 .footer{
 	text-align: center;
