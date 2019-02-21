@@ -12,6 +12,7 @@ export class RegisterComponent implements OnInit {
 	regForm : FormGroup;
 	submitted = false;
 
+	gender = ["Male", "Female", "Transgender"];
 	constructor(
 		public builder : FormBuilder,
 		public users: UsersService,
@@ -24,6 +25,7 @@ export class RegisterComponent implements OnInit {
 			fname: ['', Validators.required],
 			lname: ['', Validators.required],
 			email: ['', [Validators.required, Validators.email]],
+			gender: ['', Validators.required],
 			phone: ['', [Validators.required, Validators.maxLength(10),Validators.minLength(10), Validators.pattern('[0-9]*')]],
 			pass: ['', Validators.required],
 			cpass: ['', Validators.required]

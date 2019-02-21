@@ -21,7 +21,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-12">
 					<div class="form-group">
 						<input type="email" name="email" class="form-control" placeholder="Email" formControlName="email" required [ngClass]="{'invalid':submitted && f.email.errors, 'valid': submitted && !f.email.errors}">
 						<div *ngIf="submitted && f.email.errors" class="error">
@@ -30,6 +30,8 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
 						<input type="text" name="phone" class="form-control" placeholder="Phone" formControlName="phone" maxlength="10" minlength="10" required [ngClass]="{'invalid':submitted && f.phone.errors, 'valid': submitted && !f.phone.errors}">
@@ -38,6 +40,14 @@
 							<p *ngIf="f.phone.errors.maxlength || f.phone.errors.minlength">Phone number must be of 10 digits</p>
 							<p *ngIf="f.phone.errors.pattern">Phone number must be a numeric value</p>
 						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<select name="gender" id="gender" class="form-control" formControlName="gender" required [ngClass]="{'invalid':submitted && f.gender.errors}">
+							<option value="">Select Gender</option>
+							<option *ngFor="let gen of gender" [value]="gen">{{gen}}</option>
+						</select>
 					</div>
 				</div>
 			</div>

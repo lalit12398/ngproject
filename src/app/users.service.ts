@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class UsersService {
 
   users:any = [];
+  userName = '';
   constructor() { }
 
   setUser(userData:any) {
@@ -14,5 +15,12 @@ export class UsersService {
 
   getUser() {
     return this.users;
+  }
+  
+  setUserName(name:any=''){
+    if(name == '')
+      return this.userName;
+    this.userName = name;
+    return this.userName;
   }
 }

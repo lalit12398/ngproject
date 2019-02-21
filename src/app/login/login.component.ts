@@ -11,6 +11,7 @@ import { UsersService } from '../users.service';
 export class LoginComponent implements OnInit {
 	loginForm : FormGroup;
 	submitted = false;
+	invalidCred = false;
 	constructor(
 		public builder : FormBuilder,
 		public router : Router,
@@ -42,12 +43,20 @@ export class LoginComponent implements OnInit {
 
 		// check if user exist in user data and pass to home if true
 		let userExist = userData.find(point => {
-			if(point.email === email && point.pass === password)
-			this.router.navigate(['/home']);
-			else
-			this.router.navigate(['/login']);
-			return true;
+			if(point.email === email && point.pass === password){
+				this.users.setUserName(point.fname+" "+point.lname);
+				return true;
+			}
 		});
+		console.log(this.users.setUserName());
+		if(userExist){
+			this.invalidCred = false;
+			this.router.navigate(['/home']);
+		}else{
+			this.invalidCred = true				
+			this.router.navigate(['/login']);
+		}
+		console.log(this.invalidCred);
 	}
 
 }

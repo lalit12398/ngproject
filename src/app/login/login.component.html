@@ -18,6 +18,10 @@
 			<div class="form-group center">
 				<button type="submit" class="ng-btn">Login</button>
 			</div>
+			<div class="center">
+				<a [routerLink]="['/register']" class="black">Create Account</a>
+				<p *ngIf="invalidCred" class="error">Invalid Username/Password</p>
+			</div>
 		</form>
 	</div>
 </div>
