@@ -51,6 +51,7 @@ export class LoginComponent implements OnInit {
 		console.log(this.users.setUserName());
 		if(userExist){
 			this.invalidCred = false;
+			this.users.setStatus(true);
 			this.router.navigate(['/home']);
 		}else{
 			this.invalidCred = true				

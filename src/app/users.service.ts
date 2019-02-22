@@ -7,6 +7,7 @@ export class UsersService {
 
   users:any = [];
   userName = '';
+  isLogged:any = false;
   constructor() { }
 
   setUser(userData:any) {
@@ -22,5 +23,13 @@ export class UsersService {
       return this.userName;
     this.userName = name;
     return this.userName;
+  }
+
+  setStatus(status:any){
+    this.isLogged = status;
+  }
+
+  getStatus(){
+    return this.isLogged;
   }
 }
