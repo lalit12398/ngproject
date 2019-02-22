@@ -62,9 +62,10 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<input type="password" name="cpass" class="form-control" placeholder="Confirm Password" formControlName="cpass" required [ngClass]="{'invalid':submitted && f.cpass.errors, 'valid': submitted && !f.cpass.errors}">
+						<input type="password" name="cpass" class="form-control" placeholder="Confirm Password" formControlName="cpass" required [ngClass]="{'invalid':submitted && f.cpass.errors || f.cpass.value != f.pass.value, 'valid': submitted && !f.cpass.errors}">
 						<div *ngIf="submitted && f.cpass.errors" class="error">
 							<p *ngIf="f.cpass.errors.required">Please comfirm password</p>
+							<p *ngIf="f.cpass.value != f.pass.value">Password Mismatch!</p>
 						</div>
 					</div>
 				</div>

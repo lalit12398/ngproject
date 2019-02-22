@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RegusersComponent } from './regusers/regusers.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { RegusersComponent } from './regusers/regusers.component';
     AboutComponent,
     SidebarComponent,
     RegusersComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
