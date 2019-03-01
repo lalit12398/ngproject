@@ -1,4 +1,11 @@
-<div *ngFor="let user of userData">
+<div class="row">
+  <div class="col-cs-12">
+    <div class="form-group">
+      <input type="text" class="form-control" [(ngModel)]="searchValue" placeholder="Search">
+    </div>
+  </div>
+</div>
+<div *ngFor="let user of (userData | userSearch: searchValue)">
   <div class="user-card">
     <div class="row">
       <div class="col-md-6 card-content">

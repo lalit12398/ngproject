@@ -13,6 +13,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RegusersComponent } from './regusers/regusers.component';
 import { ContactComponent } from './contact/contact.component';
 import { TextTransform } from './directives/text-transform.directive';
+import { Search } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TextTransform } from './directives/text-transform.directive';
     SidebarComponent,
     RegusersComponent,
     ContactComponent,
-    TextTransform
+    TextTransform,
+    Search
   ],
   imports: [
     BrowserModule,

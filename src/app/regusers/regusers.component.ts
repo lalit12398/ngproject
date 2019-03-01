@@ -7,7 +7,7 @@ import { UsersService } from '../users.service';
   styleUrls: ['./regusers.component.css']
 })
 export class RegusersComponent implements OnInit {
-
+  searchValue = "";
   constructor(
     private users: UsersService
   ) { }
