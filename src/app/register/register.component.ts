@@ -11,6 +11,7 @@ import { UsersService } from '../users.service';
 export class RegisterComponent implements OnInit {
 	regForm : FormGroup;
 	submitted = false;
+	case = "capitalize";
 
 	gender = ["Male", "Female", "Transgender"];
 	constructor(

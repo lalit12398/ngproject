@@ -5,7 +5,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<input type="text" name="fname" class="form-control" placeholder="First Name" formControlName="fname" required [ngClass]="{'invalid':submitted && f.fname.errors, 'valid': submitted && !f.fname.errors}">
+						<input textTransform [textCase]="case" type="text" name="fname" class="form-control" placeholder="First Name" formControlName="fname" required [ngClass]="{'invalid':submitted && f.fname.errors, 'valid': submitted && !f.fname.errors}">
 						<div *ngIf="submitted && f.fname.errors" class="error">
 							<p *ngIf="f.fname.errors.required">First Name is required</p>
 						</div>
@@ -13,7 +13,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<input type="text" name="lname" class="form-control" placeholder="Last Name" formControlName="lname" required [ngClass]="{'invalid':submitted && f.lname.errors, 'valid': submitted && !f.lname.errors}">
+						<input textTransform [textCase]="case" type="text" name="lname" class="form-control" placeholder="Last Name" formControlName="lname" required [ngClass]="{'invalid':submitted && f.lname.errors, 'valid': submitted && !f.lname.errors}">
 						<div *ngIf="submitted && f.lname.errors" class="error">
 							<p *ngIf="f.lname.errors.required">Last name is required</p>
 						</div>
@@ -23,7 +23,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="form-group">
-						<input type="email" name="email" class="form-control" placeholder="Email" formControlName="email" required [ngClass]="{'invalid':submitted && f.email.errors, 'valid': submitted && !f.email.errors}">
+						<input textTransform [textCase]="case" type="email" name="email" class="form-control" placeholder="Email" formControlName="email" required [ngClass]="{'invalid':submitted && f.email.errors, 'valid': submitted && !f.email.errors}">
 						<div *ngIf="submitted && f.email.errors" class="error">
 							<p *ngIf="f.email.errors.required">Email is required</p>
 							<p *ngIf="f.email.errors.email">Invalid Email</p>
@@ -34,7 +34,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<input type="text" name="phone" class="form-control" placeholder="Phone" formControlName="phone" maxlength="10" minlength="10" required [ngClass]="{'invalid':submitted && f.phone.errors, 'valid': submitted && !f.phone.errors}">
+						<input textTransform [textCase]="case" type="text" name="phone" class="form-control" placeholder="Phone" formControlName="phone" maxlength="10" minlength="10" required [ngClass]="{'invalid':submitted && f.phone.errors, 'valid': submitted && !f.phone.errors}">
 						<div *ngIf="submitted && f.phone.errors" class="error">
 							<p *ngIf="f.phone.errors.required">Phone number is required</p>
 							<p *ngIf="f.phone.errors.maxlength || f.phone.errors.minlength">Phone number must be of 10 digits</p>
@@ -54,7 +54,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<input type="password" name="pass" class="form-control" placeholder="Password" formControlName="pass" required [ngClass]="{'invalid':submitted && f.pass.errors, 'valid': submitted && !f.pass.errors}">
+						<input textTransform [textCase]="case" type="password" name="pass" class="form-control" placeholder="Password" formControlName="pass" required [ngClass]="{'invalid':submitted && f.pass.errors, 'valid': submitted && !f.pass.errors}">
 						<div *ngIf="submitted && f.pass.errors" class="error">
 							<p *ngIf="f.pass.errors.required">Password is required</p>
 						</div>
@@ -62,7 +62,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<input type="password" name="cpass" class="form-control" placeholder="Confirm Password" formControlName="cpass" required [ngClass]="{'invalid':submitted && f.cpass.errors || f.cpass.value != f.pass.value, 'valid': submitted && !f.cpass.errors}">
+						<input textTransform [textCase]="case" type="password" name="cpass" class="form-control" placeholder="Confirm Password" formControlName="cpass" required [ngClass]="{'invalid':submitted && f.cpass.errors || f.cpass.value != f.pass.value, 'valid': submitted && !f.cpass.errors}">
 						<div *ngIf="submitted && f.cpass.errors" class="error">
 							<p *ngIf="f.cpass.errors.required">Please comfirm password</p>
 							<p *ngIf="f.cpass.value != f.pass.value">Password Mismatch!</p>
