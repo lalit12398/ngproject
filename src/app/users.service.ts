@@ -5,7 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class UsersService {
 
-  users:any = [];
+  users:any = [
+    {fname: "Lalit", lname: "Chauhan", email: "lalit@yopmail.com", gender: "Male", phone: "9013942501", pass: "qwerty", cpass: "qwerty"}
+  ];
   userName = '';
   isLogged:any = false;
   constructor() { }

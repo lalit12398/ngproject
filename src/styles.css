@@ -165,4 +165,27 @@ h2{
 .footer p {
 	margin: 0px;
 }
-/* You can add global styles to this file, and also import other style files */
+/* product page css */
+img.prod-img {
+    width: 250px;
+	height: 271px;
+	border: 1px solid #c1c1c1;
+	margin-bottom: 20px;
+}
+.product-box {
+	text-align: center;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    border: 4px solid #c1c1c1;
+}
+.product-box h3{
+	text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.badge:empty {
+    display: inline-block!important;
+    height: 13px;
+}

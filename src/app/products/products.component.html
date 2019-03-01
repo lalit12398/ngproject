@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-12">
+        <label class="radio-inline"><input type="radio" name="optradio" value="lowToHigh">Price Low to High</label>
+        <label class="radio-inline"><input type="radio" name="optradio" value="highToLow">Price High</label>
+        <select class="form-control">
+            <option *ngFor="let color of productList" >{{color.color}} <span class="badge" [ngStyle]="{'background': color.color}"> </span></option>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4" *ngFor="let product of productList">
+        <div class="product-box">
+            <img src="{{product.imagePath}}" alt="{{product.name}}" class="prod-img">
+            <h3>{{product.name}}</h3>
+            <p>Price: {{product.price}}</p>
+            <p>Material: {{product.material}}</p>
+            <p style="text-transform:capitalize">Color: {{product.color}} <span class="badge" [ngStyle]="{'background': product.color}"> </span></p>
+        </div>
+    </div>
+</div>
