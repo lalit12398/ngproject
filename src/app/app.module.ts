@@ -15,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TextTransform } from './directives/text-transform.directive';
 import { Search } from './pipes/search.pipe';
 import { ProductsComponent } from './products/products.component';
+import { ProductFilter } from './pipes/productFilter.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProductsComponent } from './products/products.component';
     ContactComponent,
     TextTransform,
     Search,
-    ProductsComponent
+    ProductsComponent,
+    ProductFilter
   ],
   imports: [
     BrowserModule,

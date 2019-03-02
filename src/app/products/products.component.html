@@ -1,14 +1,22 @@
 <div class="row">
-    <div class="col-md-12">
-        <label class="radio-inline"><input type="radio" name="optradio" value="lowToHigh">Price Low to High</label>
-        <label class="radio-inline"><input type="radio" name="optradio" value="highToLow">Price High</label>
-        <select class="form-control">
-            <option *ngFor="let color of productList" >{{color.color}} <span class="badge" [ngStyle]="{'background': color.color}"> </span></option>
-        </select>
+    <div class="col-md-12" style="margin-bottom:20px">
+        <div class="col-md-3 form-control-background">
+            <label class="radio-inline"><input type="radio" name="optradio" value="lowToHigh" [(ngModel)]="priceFilter" >Price Low to High</label>
+            <label class="radio-inline"><input type="radio" name="optradio" value="highToLow" [(ngModel)]="priceFilter" >Price High</label>
+        </div>
+        <div class="col-md-4">
+            <select class="form-control" [(ngModel)]="colorFilter">
+                <option value="">Select Color</option>
+                <option *ngFor="let color of productList" value="{{color.color}}" >{{color.color}} <span class="badge" [ngStyle]="{'background': color.color}"> </span></option>
+            </select>
+        </div>
+        <div class="col-md-5" style="margin-right:0px;">
+            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchValue">
+        </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-4" *ngFor="let product of productList">
+    <div class="col-md-3" *ngFor="let product of productList | productFilter: priceFilter:colorFilter:searchValue">
         <div class="product-box">
             <img src="{{product.imagePath}}" alt="{{product.name}}" class="prod-img">
             <h3>{{product.name}}</h3>
