@@ -107,10 +107,7 @@ h2{
 
 /* sidebar style */
 .side-bar-main {
-    width: 15%;
-    margin-right: 2.5%;
     min-height: 899px;
-    float: left;
     background-color: #44432d;
     color: #fff;
     font-weight: 600;

@@ -1,24 +1,25 @@
-<div class="row">
-    <div class="col-md-12" style="margin-bottom:20px">
-        <div class="col-md-3 form-control-background">
-            <label class="radio-inline"><input type="radio" name="optradio" value="lowToHigh" [(ngModel)]="priceFilter" >Price Low to High</label>
-            <label class="radio-inline"><input type="radio" name="optradio" value="highToLow" [(ngModel)]="priceFilter" >Price High</label>
+<div class="row mb-4">
+    <div class="col-md-4 col-sm-6">
+        <div class="form-control-background">
+        <label class="radio-inline"><input type="radio" name="optradio" value="lowToHigh" [(ngModel)]="priceFilter" >Price Low to High</label>
+        <label class="radio-inline"><input type="radio" name="optradio" value="highToLow" [(ngModel)]="priceFilter" >Price High</label>
+        <label class="radio-inline"><input type="radio" name="optradio" value="none" [(ngModel)]="priceFilter" >None</label>
         </div>
-        <div class="col-md-4">
-            <select class="form-control" [(ngModel)]="colorFilter">
-                <option value="">Select Color</option>
-                <option *ngFor="let color of productList" value="{{color.color}}" >{{color.color}} <span class="badge" [ngStyle]="{'background': color.color}"> </span></option>
-            </select>
-        </div>
-        <div class="col-md-5" style="margin-right:0px;">
-            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchValue">
-        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <select class="form-control" [(ngModel)]="colorFilter">
+            <option value="">Select Color</option>
+            <option *ngFor="let color of productList" value="{{color.color}}" >{{color.color}} <span class="badge" [ngStyle]="{'background': color.color}"> </span></option>
+        </select>
+    </div>
+    <div class="col-md-4 col-sm-6" style="margin-right:0px;">
+        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchValue">
     </div>
 </div>
 <div class="row">
-    <div class="col-md-3" *ngFor="let product of productList | productFilter: priceFilter:colorFilter:searchValue">
+    <div class="col-md-4 col-sm-6" *ngFor="let product of productList | productFilter: priceFilter:colorFilter:searchValue;trackBy: trackByFn">
         <div class="product-box">
-            <img src="{{product.imagePath}}" alt="{{product.name}}" class="prod-img">
+            <img src="{{product.imagePath}}" alt="{{product.name}}" class="prod-img img-fluid">
             <h3>{{product.name}}</h3>
             <p>Price: {{product.price}}</p>
             <p>Material: {{product.material}}</p>
