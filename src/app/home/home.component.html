@@ -1,7 +1,9 @@
 <app-header></app-header>
-<div class="side-bar-main">
-    <app-sidebar></app-sidebar>
-</div>
-<div class="home-content">
-    <router-outlet></router-outlet>
+<div class="row">
+    <div class="side-bar-main col-md-3">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="home-content col-md-9">
+        <router-outlet></router-outlet>
+    </div>
 </div>

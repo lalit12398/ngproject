@@ -23,4 +23,9 @@ export class ProductsComponent{
         {name: "Green Jacket", material: "Leather", imagePath: "https://www.patagonia.com/dis/dw/image/v2/ABBM_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw8c3bd24c/images/hi-res/84212_BLK.jpg?sw=750&sh=750&sm=fit&sfrm=png", color: "green", price: 2600},
         {name: "Black Jacket", material: "Denim", imagePath: "https://www.patagonia.com/dis/dw/image/v2/ABBM_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw8c3bd24c/images/hi-res/84212_BLK.jpg?sw=750&sh=750&sm=fit&sfrm=png", color: "black", price: 2700},
     ]
+
+    trackByFn(index, item){
+        console.log(item);
+        return index;
+    }
 }
