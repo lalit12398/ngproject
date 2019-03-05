@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
     templateUrl: "products.component.html",
 })
 export class ProductsComponent{
-    priceFilter: any;
-    colorFilter: any;
-    searchValue: any;
+    priceFilter: string;
+    colorFilter: string;
+    searchValue: string;
     productList: any = [
         {name: "Blue Jeans", material: "Denim", imagePath: "https://res.cloudinary.com/everlane/image/upload/c_fill,dpr_1.0,f_jpg,h_581,q_85,w_581/v1/i/f725922f_538f.jpg", color: "blue", price: 2000},
         {name: "Light Blue Jeans", material: "Cotton", imagePath: "https://res.cloudinary.com/everlane/image/upload/c_fill,dpr_1.0,f_jpg,h_581,q_85,w_581/v1/i/f725922f_538f.jpg", color: "cyan", price: 1000},

@@ -2,7 +2,7 @@ import { Pipe } from '@angular/core';
 
 @Pipe({name: 'productFilter'})
 export class ProductFilter {
-    transform(value: any[], priceFilterValue: any , colorFilterValue: any, searchValue: any){
+    transform(value: any[], priceFilterValue: string , colorFilterValue: string, searchValue: string){
         let filteredList = value;
         if(priceFilterValue != ""){
             if(priceFilterValue === "lowToHigh"){
